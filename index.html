@@ -1,7 +1,196 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+	<head>
+		<meta charset="utf-8" />
+		<title>瑜洲之家首页</title>
+	</head>
+	<style type="text/css">
+		body{
+			margin: 10px; 
+			padding: 5px;
+			border: solid;
+			color: pink;
+		}
+		.ftop{
+			 border: 1px solid black;
+			margin: auto;
+			width:98%;
+			height:80px;
+			font: "微软雅黑";
+			font-size: 75px;
+		}
+		.fright{
+			/*border: 1px solid red;*/
+			margin: 10px;
+			line-height: 100px;
+			width: 5.1%;
+			height: 60px;
+			font-size: 20px;
+			float: right;
+			 
+		}
+		.ttop{
+			border: 1px solid cornflowerblue;
+			margin: auto;
+			padding: 1px;
+			width: 98%;
+			height: 80px;
+			
+		}
+		#mid{
+			margin: auto;
+			margin-top: 10px;
+			width: 98%;
+			height: 750px;
+			background-color: lightblue;
+			text-align: center;
+			font-size: 100px;
+			style="overflow: hidden";
+			}
+		.xx{
+			margin: auto;
+			margin-top: 5px;
+			/*border: 1px solid red;*/
+			width: 98%;
+			height: 500px;
+		}
+		.xu{
+			margin: 10px;
+			border: 1px solid black;
+			width: 21%;
+			height: 410px;
+			float: left;
+		}
+		.yz{
+			margin: 10px;
+			border: 1px solid black;
+			width: 53%;
+			height: 350px;
+		    float: left;
+		}
+		.hu{
+			margin: 10px;
+			border: 1px solid black;
+			width: 21%;
+			height: 410px;
+			float: left;
+			
+		}
+		#footer{
+			margin: auto;
+			margin-top: 5px;
+			width: 98%;
+			height: 300px;
+			font-size: 10px;
+		}
+		.logo{
+			border: 1px solid red ;
+			
+			width: 5.1%;
+			height: 60px;
+			float: left;
+		}
+		
+		a{
+            color:pink;
+        }
+
+        a:hover{
+            color: black;
+        }
+		
+		</style>
+	<script type="text/javascript">
+		function init(){
+			setInterval("changeImg()",3000);
+			time=setInterval("showTop()",3000);
+			
+		}
+		var i=0;
+		function changeImg(){
+			i++;
+			document.getElementById("img1").src="img/"+i+".jpg";
+			if(i==5){
+				i=0;
+			}
+		}
+		
+		function showTop(){
+			var adEle=document.getElementById("img2");
+			adEle.style.display="block";
+			clearInterval(time);
+			time=setInterval("hiddenTop()",3000);
+			
+		}
+		
+		function hiddenTop(){
+			document.getElementById("img2").style.display="none";
+			clearInterval(time);
+		}
+		
+	</script>
+	<body onload="init()">
+		<img src="img/hz1.jpg" width="100%" style="display: none" id="img2"/>
+		<div class="ftop">
+			瑜洲之家	
+			<a href="#"><div class="fright">
+				注册			
+			</div></a>
+			<a href="#" target="_blank"><div class="fright">
+				登录			
+			</div></a>
+		</div>
+		
+		<div class="ttop" style="margin-top: 1px;">
+			<div class="logo">
+				<!--logo-->
+				<img src="img/logo.jpg" width="250px" height="80px"/>
+				
+			</div>
+			 
+			<a href="#"><div class="fright" >
+				粉丝
+			</div>
+			</a>
+			<div class="fright">
+				美图
+			</div>
+			
+			<div class="fright">
+				视频
+			</div>
+			
+			<div class="fright">
+				资源
+			</div>					
+			
+		</div>
+		<div id="mid">
+			<!--瑜洲美图-->
+			<img src="img/1.jpg" width="85%" height="100%" id="img1"/>
+		</div>
+		
+			
+		<div class="xx">
+		     <div class="xu">
+			        <!--许魏洲-->
+			        <img src="img/xuf.jpg" width="100%" height="410px"/>
+		     </div>
+		    <div class="yz">
+			        两人信息				
+		    </div>
+		    <div class="hu">
+			        <!-- 黄景瑜-->
+			        <img src="img/huf.jpg" width="100%" height="410px"/>
+		    </div>
+	  	
+	     </div>
+	     
+	     <div id="footer">
+	     	
+	     </div>
+		
+		
+		
+	</body>
 </html>
